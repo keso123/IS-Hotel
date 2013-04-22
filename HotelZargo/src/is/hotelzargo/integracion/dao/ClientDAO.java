@@ -7,7 +7,6 @@ import is.hotelzargo.negocio.transfer.ClientTransfer;
 
 public interface ClientDAO {
 
-	//TODO añadir excepciones de la capa de integracion
 	public void createClient(ClientTransfer t) throws ClientIntegrationException;
 	
 	public void deleteClient(int id) throws ClientIntegrationException;

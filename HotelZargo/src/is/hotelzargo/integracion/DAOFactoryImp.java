@@ -6,7 +6,7 @@ import is.hotelzargo.integracion.dao.ClientDAOImp;
 public class DAOFactoryImp extends DAOFactory {
 
 	public DAOFactoryImp() {
-		//TODO crear/inicializar MySQL
+		//TODO Gorka: crear/inicializar MySQL
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import is.hotelzargo.negocio.transfer.ClientTransfer;
 
 public class ClientDAOImp implements ClientDAO {
 
-	//TODO todas las llamadas a la BBDD
+	//TODO Gorka: todas las llamadas a la BBDD
 	@Override
 	public void createClient(ClientTransfer t) throws ClientIntegrationException {
 		
