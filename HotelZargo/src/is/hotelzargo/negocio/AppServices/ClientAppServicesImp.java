@@ -38,6 +38,8 @@ public class ClientAppServicesImp implements ClientAppServices {
 	private void checkDataIndividual(ClientTransfer t) throws ClientAppServiceException {
 		
 		String DNI = ((ClientTransferIndividual)t).getDNI();
+		String TLF = ((ClientTransferIndividual)t).getPhone();
+		String TJC = ((ClientTransferIndividual)t).getCreditCard();
 		
 		if(((ClientTransferIndividual)t).getName().length() < 3)
 			throw new ClientAppServiceException("Nombre no valido");
@@ -45,22 +47,29 @@ public class ClientAppServicesImp implements ClientAppServices {
 			throw new ClientAppServiceException("Apellido no valido");
 		if(DNI.length() != 9)
 			throw new ClientAppServiceException("DNI no valido");
-		if(!checkNumberDni(DNI))
+		if(!checkDni(DNI))
 			throw new ClientAppServiceException("DNI no valido");
-		if(((ClientTransferIndividual)t).getPhone().length() == 0)
+		if ((TLF.length() != 9)||(TLF.indexOf("9") == -1)||(TLF.indexOf("6") == -1))
 			throw new ClientAppServiceException("Telefono no valido");
-		if(((ClientTransferIndividual)t).getCreditCard().length() == 0)
+		if(TJC.length() == 0)
 			throw new ClientAppServiceException("Tarjeta de credito no valida");
 		if(((ClientTransferIndividual)t).getAddress().length() == 0)
 			throw new ClientAppServiceException("Domicilio no valido");
 	}
 	
-	private boolean checkNumberDni(String DNI) {
+	private boolean checkDni(String DNI) {
+		
+		int num_t = 0;
+		char num = ' ';
+		char letters [] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
 		
 		for (int i=0 ; i==7 ; i++){
-			if (Integer.parseInt(DNI)){}
+			num = DNI.charAt(i);
+			num_t += num-48; 
 		}
-		return false;
+		
+	    if (letters[num_t%23]!=DNI.charAt(8)) return false;
+	    else return true;
 	}
 
 	private void checkDataCompany(ClientTransfer t) throws ClientAppServiceException {
