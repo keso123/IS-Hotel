@@ -36,23 +36,33 @@ public class ClientAppServicesImp implements ClientAppServices {
 	}
 	
 	private void checkDataIndividual(ClientTransfer t) throws ClientAppServiceException {
-		/*
-		if(t.getName().length() == 0)
+		
+		String DNI = ((ClientTransferIndividual)t).getDNI();
+		
+		if(((ClientTransferIndividual)t).getName().length() < 3)
 			throw new ClientAppServiceException("Nombre no valido");
-		if(t.getSurname().length() == 0)
+		if(((ClientTransferIndividual)t).getSurname().length() == 0)
 			throw new ClientAppServiceException("Apellido no valido");
-		if(t.getDNI().length() != 9)
+		if(DNI.length() != 9)
 			throw new ClientAppServiceException("DNI no valido");
-		if(t.getPhone().length() == 0)
+		if(!checkNumberDni(DNI))
+			throw new ClientAppServiceException("DNI no valido");
+		if(((ClientTransferIndividual)t).getPhone().length() == 0)
 			throw new ClientAppServiceException("Telefono no valido");
-		if(t.getCreditCard().length() == 0)
+		if(((ClientTransferIndividual)t).getCreditCard().length() == 0)
 			throw new ClientAppServiceException("Tarjeta de credito no valida");
-		if(t.getCompany().length() == 0)
-			throw new ClientAppServiceException("Empresa no valida");
-		if(t.getAddress().length() == 0)
-			throw new ClientAppServiceException("Domicilio no valido");*/
+		if(((ClientTransferIndividual)t).getAddress().length() == 0)
+			throw new ClientAppServiceException("Domicilio no valido");
 	}
 	
+	private boolean checkNumberDni(String DNI) {
+		
+		for (int i=0 ; i==7 ; i++){
+			if (Integer.parseInt(DNI)){}
+		}
+		return false;
+	}
+
 	private void checkDataCompany(ClientTransfer t) throws ClientAppServiceException {
 		/*if(t.getName().length() == 0)
 			throw new ClientAppServiceException("Nombre no valido");
