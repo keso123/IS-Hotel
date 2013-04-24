@@ -57,51 +57,6 @@ public class ClientAppServicesImp implements ClientAppServices {
 			throw new ClientAppServiceException("Domicilio no valido");
 	}
 	
-	private boolean chechTCredit (String creditCardNumber){	  
-	    
-		int cardSize = creditCardNumber.length();
-
-	    //Creditcard number length must be between 13 and 16
-	    if (cardSize >= 13 && cardSize <= 16)
-	    {
-	       int odd = 0;
-	       int even = 0;
-	       char[] cardNumberArray = new char[cardSize];
-
-	       //Read the creditcard number into an array
-	       cardNumberArray = creditCardNumber.ToCharArray();
-
-	       //Reverse the array
-	       Array.Reverse(cardNumberArray, 0, cardSize);
-
-	       //Multiply every second number by two and get the sum. 
-	       //Get the sum of the rest of the numbers.
-	       for (int i = 0; i < cardSize; i++)
-	       {
-	          if (i%2 ==0)
-	          {
-	             odd += (Convert.ToInt32(cardNumberArray.GetValue(i))-48);   
-	          }
-	          else
-	          {
-	             int temp = (Convert.ToInt32(cardNumberArray[i]) - 48) * 2;
-	             //if the value is greater than 9, substract 9 from the value
-	             if (temp > 9)
-	             {
-	                temp = temp-9;
-	             }
-	             even += temp;
-	          }
-	        }
-	        if ((odd+even)%10 == 0)     
-	           return true;
-	        else
-	           return false;
-	      }
-	      else
-	         return false;
-	  } 
-	
 	private boolean checkDni(String DNI) {
 		
 		int num_t = 0;
