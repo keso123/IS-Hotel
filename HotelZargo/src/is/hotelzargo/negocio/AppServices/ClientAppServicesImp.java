@@ -5,6 +5,7 @@ import is.hotelzargo.integracion.dao.ClientDAO;
 import is.hotelzargo.integracion.exception.ClientIntegrationException;
 import is.hotelzargo.negocio.exception.ClientAppServiceException;
 import is.hotelzargo.negocio.transfer.ClientTransfer;
+import is.hotelzargo.negocio.transfer.ClientTransferCompany;
 import is.hotelzargo.negocio.transfer.ClientTransferIndividual;
 
 public class ClientAppServicesImp implements ClientAppServices {
@@ -63,7 +64,7 @@ public class ClientAppServicesImp implements ClientAppServices {
 		char num = ' ';
 		char letters [] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
 		
-		for (int i=0 ; i==7 ; i++){
+		for (int i=0 ; i<=7 ; i++){
 			num = DNI.charAt(i);
 			num_t += num-48; 
 		}
@@ -73,11 +74,20 @@ public class ClientAppServicesImp implements ClientAppServices {
 	}
 
 	private void checkDataCompany(ClientTransfer t) throws ClientAppServiceException {
-		/*if(t.getName().length() == 0)
+		
+		String TLF = ((ClientTransferCompany)t).getPhone();
+		String TJC = ((ClientTransferCompany)t).getCreditCard();
+		
+		if(((ClientTransferCompany)t).getCompany().length() == 0)
 			throw new ClientAppServiceException("Nombre no valido");
-		if(t.getSurname().length() == 0)
-			throw new ClientAppServiceException("Apellido no valido");*/
-		//TODO CHECK
+		if(((ClientTransferCompany)t).getAddress().length() == 0)
+			throw new ClientAppServiceException("Domicilio no valido");
+		if ((TLF.length() != 9)||(TLF.indexOf("9") == -1)||(TLF.indexOf("6") == -1))
+			throw new ClientAppServiceException("Telefono no valido");
+		if((TJC.length() < 13)||(TJC.length() > 16))
+			throw new ClientAppServiceException("Tarjeta de credito no valida");
+		if(((ClientTransferCompany)t).getCIF().length() != 9)
+			throw new ClientAppServiceException("Domicilio no valido");
 	}
 
 	@Override
