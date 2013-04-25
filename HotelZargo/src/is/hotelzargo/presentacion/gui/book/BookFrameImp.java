@@ -25,10 +25,27 @@ public class BookFrameImp extends BookFrame {
 	private JButton confirmBookButton;
 	private JButton exit;
 	
+	private BookFormAdd addForm;
+	private BookFormDel delForm;
+	private BookFormMod modForm;
+	private BookFormList listForm;
+	private BookFormFind findForm;
+	private BookFormConfirm confirmForm;
+	
 	public BookFrameImp() {
 		
 		this.setTitle("Reservas");
 		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		
+		/* formularios */
+		addForm = new BookFormAdd(this,true);
+		delForm = new BookFormDel(this,true);
+		modForm = new BookFormMod(this,true);
+		listForm = new BookFormList(this,true);
+		findForm = new BookFormFind(this,true);
+		confirmForm = new BookFormConfirm(this,true);
+		
+		/* botones */
 		
 		addBookButton = new JButton("Dar de alta");
 		delBookButton = new JButton("Dar de baja");
@@ -53,6 +70,30 @@ public class BookFrameImp extends BookFrame {
 		this.setLocation(d.width/2 - this.getWidth()/2, d.height/2 - this.getHeight()/2);
 		
 		this.pack();
+	}
+	
+	private void addBook() {
+		addForm.setVisible(true);
+	}
+	
+	private void delBook(){
+		delForm.setVisible(true);
+	}
+	
+	private void modBook() {
+		modForm.setVisible(true);
+	}
+	
+	private void listBook(){
+		listForm.setVisible(true);
+	}
+	
+	private void findBook(){
+		findForm.setVisible(true);
+	}
+	
+	private void confirmBook(){
+		confirmForm.setVisible(true);
 	}
 	
 	private void exit() {
@@ -95,6 +136,54 @@ public class BookFrameImp extends BookFrame {
 			@Override
 			public void windowActivated(WindowEvent e) {
 				
+			}
+		});
+		
+		this.addBookButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				addBook();
+			}
+		});
+		
+		this.delBookButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				delBook();
+			}
+		});
+		
+		this.modBookButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				modBook();
+			}
+		});
+		
+		this.listBookButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				listBook();
+			}
+		});
+		
+		this.findBookButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				findBook();
+			}
+		});
+		
+		this.confirmBookButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				confirmBook();
 			}
 		});
 		

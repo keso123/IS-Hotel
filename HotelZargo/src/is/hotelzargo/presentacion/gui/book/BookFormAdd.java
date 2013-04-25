@@ -1,5 +1,12 @@
 package is.hotelzargo.presentacion.gui.book;
 
-public class BookFormAdd {
+import javax.swing.JDialog;
+import javax.swing.JFrame;
 
+@SuppressWarnings("serial")
+public class BookFormAdd extends JDialog {
+
+	public BookFormAdd(JFrame owner,boolean mod) {
+		super(owner,mod);
+	}
 }
