@@ -11,7 +11,7 @@ import java.sql.Statement;
 
 public class DAOFactoryImp extends DAOFactory {
 	
-	
+	//TODO todas las funciones que hagas aqui menos los get de los DAO son privadas
     Connection conexion = null;
     Statement s = null;
     ResultSet rs = null;
@@ -43,7 +43,7 @@ public class DAOFactoryImp extends DAOFactory {
 	
 	
 	
-	public void createDataBase() throws SQLException{
+	private void createDataBase() throws SQLException{
 		s.executeUpdate("CREATE TABLE Clients (" +
 				"		  id INT AUTO_INCREMENT, " +
 						 "PRIMARY KEY(id), " +
@@ -53,13 +53,13 @@ public class DAOFactoryImp extends DAOFactory {
 	}
 	
 	
-	public void deleteDataBase() throws SQLException{
+	private void deleteDataBase() throws SQLException{
 		s.executeUpdate("DROP TABLE Clients");
 	}
 	
 	
 	
-	public void initDataBase(){
+	private void initDataBase(){
  //PROBANDO BASE DE DATOS
         
         try
