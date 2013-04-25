@@ -1,6 +1,7 @@
-package is.hotelzargo.presentacion.comand;
+package is.hotelzargo.presentacion.comand.appservices;
 
 import is.hotelzargo.negocio.transfer.ShiftTransfer;
+import is.hotelzargo.presentacion.comand.Command;
 
 public class CommandActionAddShift implements Command {
 	

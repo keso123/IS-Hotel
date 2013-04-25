@@ -1,4 +1,4 @@
-package is.hotelzargo.negocio.AppServices;
+package is.hotelzargo.negocio.appservices;
 
 import is.hotelzargo.negocio.exception.ClientAppServiceException;
 import is.hotelzargo.negocio.transfer.ClientTransfer;

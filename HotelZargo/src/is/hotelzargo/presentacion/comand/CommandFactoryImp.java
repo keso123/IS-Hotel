@@ -2,6 +2,16 @@ package is.hotelzargo.presentacion.comand;
 
 import is.hotelzargo.negocio.transfer.ClientTransfer;
 import is.hotelzargo.negocio.transfer.ShiftTransfer;
+import is.hotelzargo.presentacion.comand.appservices.CommandActionAddClient;
+import is.hotelzargo.presentacion.comand.appservices.CommandActionAddShift;
+import is.hotelzargo.presentacion.comand.appservices.CommandActionDelClient;
+import is.hotelzargo.presentacion.comand.appservices.CommandActionListClient;
+import is.hotelzargo.presentacion.comand.gui.CommandActionShowBookFrame;
+import is.hotelzargo.presentacion.comand.gui.CommandActionShowClientFrame;
+import is.hotelzargo.presentacion.comand.gui.CommandActionShowEmployeeFrame;
+import is.hotelzargo.presentacion.comand.gui.CommandActionShowRoomFrame;
+import is.hotelzargo.presentacion.comand.gui.CommandActionShowServicesFrame;
+import is.hotelzargo.presentacion.comand.gui.CommandActionShowShiftFrame;
 import is.hotelzargo.presentacion.controller.Event;
 
 public class CommandFactoryImp extends CommandFactory {

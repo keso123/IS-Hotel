@@ -1,7 +1,7 @@
 package is.hotelzargo.negocio;
 
-import is.hotelzargo.negocio.AppServices.ClientAppServices;
-import is.hotelzargo.negocio.AppServices.ClientAppServicesImp;
+import is.hotelzargo.negocio.appservices.ClientAppServices;
+import is.hotelzargo.negocio.appservices.ClientAppServicesImp;
 
 public class BusinessFactoryImp extends BusinessFactory {
 

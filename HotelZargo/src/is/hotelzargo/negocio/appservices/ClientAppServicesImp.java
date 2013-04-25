@@ -1,4 +1,4 @@
-package is.hotelzargo.negocio.AppServices;
+package is.hotelzargo.negocio.appservices;
 
 import is.hotelzargo.integracion.DAOFactory;
 import is.hotelzargo.integracion.dao.ClientDAO;

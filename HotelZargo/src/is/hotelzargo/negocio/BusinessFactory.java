@@ -1,6 +1,6 @@
 package is.hotelzargo.negocio;
 
-import is.hotelzargo.negocio.AppServices.ClientAppServices;
+import is.hotelzargo.negocio.appservices.ClientAppServices;
 
 public abstract class BusinessFactory {
 
