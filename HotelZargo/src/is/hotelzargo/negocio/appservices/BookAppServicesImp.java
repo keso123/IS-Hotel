@@ -1,5 +1,5 @@
 package is.hotelzargo.negocio.appservices;
 
-public class BookAppServicesImp {
+public class BookAppServicesImp implements BookAppServices {
 
 }

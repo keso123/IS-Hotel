@@ -1,5 +1,10 @@
 package is.hotelzargo.negocio.exception;
 
-public class BookAppServicesException {
+@SuppressWarnings("serial")
+public class BookAppServicesException extends BusinessException {
+
+	public BookAppServicesException(String err) {
+		super(err);
+	}
 
 }

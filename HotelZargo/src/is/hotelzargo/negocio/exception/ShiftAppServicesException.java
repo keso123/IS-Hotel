@@ -1,5 +1,10 @@
 package is.hotelzargo.negocio.exception;
 
-public class ShiftAppServicesException {
+@SuppressWarnings("serial")
+public class ShiftAppServicesException extends BusinessException {
+
+	public ShiftAppServicesException(String err) {
+		super(err);
+	}
 
 }

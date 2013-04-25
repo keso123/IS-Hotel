@@ -1,5 +1,5 @@
 package is.hotelzargo.negocio.appservices;
 
-public class ShiftAppServices {
+public interface ShiftAppServices {
 
 }
