@@ -33,7 +33,7 @@ public class ClientAppServicesImp implements ClientAppServices {
 		}else {
 			checkDataCompany(t);
 		}
-		//TODO Comprobar que no exista en la BBDD
+		//TODO Comprobar que no exista en la BBDD 
 	}
 	
 	private void checkDataIndividual(ClientTransfer t) throws ClientAppServiceException {
