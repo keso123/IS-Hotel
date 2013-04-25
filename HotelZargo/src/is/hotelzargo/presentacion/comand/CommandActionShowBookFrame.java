@@ -1,7 +1,7 @@
 package is.hotelzargo.presentacion.comand;
 
-import is.hotelzargo.presentacion.gui.BookFrame;
 import is.hotelzargo.presentacion.gui.MainFrame;
+import is.hotelzargo.presentacion.gui.book.BookFrame;
 
 public class CommandActionShowBookFrame implements Command {
 

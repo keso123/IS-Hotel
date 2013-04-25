@@ -1,7 +1,7 @@
 package is.hotelzargo.presentacion.comand;
 
 import is.hotelzargo.presentacion.gui.MainFrame;
-import is.hotelzargo.presentacion.gui.ShiftFrame;
+import is.hotelzargo.presentacion.gui.shift.ShiftFrame;
 
 public class CommandActionShowShiftFrame implements Command {
 

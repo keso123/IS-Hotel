@@ -2,7 +2,6 @@ package is.hotelzargo.integracion;
 
 import is.hotelzargo.integracion.dao.ClientDAO;
 import is.hotelzargo.integracion.dao.ClientDAOImp;
-import is.hotelzargo.presentacion.gui.MainFrame;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,7 +1,7 @@
 package is.hotelzargo.presentacion.comand;
 
 import is.hotelzargo.presentacion.gui.MainFrame;
-import is.hotelzargo.presentacion.gui.ServicesFrame;
+import is.hotelzargo.presentacion.gui.services.ServicesFrame;
 
 public class CommandActionShowServicesFrame implements Command {
 	
