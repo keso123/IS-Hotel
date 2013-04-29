@@ -115,4 +115,10 @@ public class ClientAppServicesImp implements ClientAppServices {
 		}
 	}
 
+	@Override
+	public void modClient(ClientTransfer t) throws ClientAppServicesException {
+		// TODO modificar reserva
+		
+	}
+
 }

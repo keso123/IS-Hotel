@@ -121,22 +121,22 @@ public class CommandFactoryImp extends CommandFactory {
 			return new CommandActionListShift();
 			
 		case MOD_BOOK:
-			return new CommandActionModBook((String) data);
+			return new CommandActionModBook((BookTransfer) data);
 			
 		case MOD_CLIENT:
-			return new CommandActionModClient((String) data);
+			return new CommandActionModClient((ClientTransfer) data);
 			
 		case MOD_EMPLOYEE:
-			return new CommandActionModEmployee((String) data);
+			return new CommandActionModEmployee((EmployeeTransfer) data);
 			
 		case MOD_ROOM:
-			return new CommandActionModRoom((String) data);
+			return new CommandActionModRoom((RoomTransfer) data);
 			
 		case MOD_SERVICE:
-			return new CommandActionModService((String) data);
+			return new CommandActionModService((ServiceTransfer) data);
 			
 		case MOD_SHIFT:
-			return new CommandActionModShift((String) data);
+			return new CommandActionModShift((ShiftTransfer) data);
 			
 		case FIND_BOOK:
 			return new CommandActionFindBook((String) data);

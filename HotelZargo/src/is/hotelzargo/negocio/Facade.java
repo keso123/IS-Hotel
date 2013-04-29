@@ -21,7 +21,7 @@ public interface Facade {
 
 	public void listClient()throws ClientAppServicesException;
 	
-	public void modClient(String id)throws ClientAppServicesException;
+	public void modClient(ClientTransfer t)throws ClientAppServicesException;
 	
 	public void addBook(BookTransfer t)throws BookAppServicesException;
 	
@@ -29,7 +29,7 @@ public interface Facade {
 	
 	public void listBook()throws BookAppServicesException;
 	
-	public void modBook(String id)throws BookAppServicesException;
+	public void modBook(BookTransfer t)throws BookAppServicesException;
 	
 	public void findBook(String id)throws BookAppServicesException;
 	
@@ -41,7 +41,7 @@ public interface Facade {
 	
 	public void listEmployee()throws EmployeeAppServicesException;
 	
-	public void modEmployee(String id)throws EmployeeAppServicesException;
+	public void modEmployee(EmployeeTransfer t)throws EmployeeAppServicesException;
 	
 	public void addRoom(RoomTransfer t)throws RoomAppServicesException;
 	
@@ -49,7 +49,7 @@ public interface Facade {
 	
 	public void listRoom()throws RoomAppServicesException;
 	
-	public void modRoom(String id)throws RoomAppServicesException;
+	public void modRoom(RoomTransfer t)throws RoomAppServicesException;
 	
 	public void addService(ServiceTransfer t)throws ServicesAppServicesException;
 	
@@ -57,7 +57,7 @@ public interface Facade {
 	
 	public void listService()throws ServicesAppServicesException;
 	
-	public void modService(String id)throws ServicesAppServicesException;
+	public void modService(ServiceTransfer t)throws ServicesAppServicesException;
 	
 	public void addShift(ShiftTransfer t)throws ShiftAppServicesException;
 	
@@ -65,5 +65,5 @@ public interface Facade {
 	
 	public void listShift()throws ShiftAppServicesException;
 	
-	public void modShift(String id)throws ShiftAppServicesException;
+	public void modShift(ShiftTransfer t)throws ShiftAppServicesException;
 }

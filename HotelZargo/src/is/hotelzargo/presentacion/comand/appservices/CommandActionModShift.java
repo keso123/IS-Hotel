@@ -3,14 +3,15 @@ package is.hotelzargo.presentacion.comand.appservices;
 import is.hotelzargo.negocio.BusinessFactory;
 import is.hotelzargo.negocio.Facade;
 import is.hotelzargo.negocio.exception.ShiftAppServicesException;
+import is.hotelzargo.negocio.transfer.ShiftTransfer;
 import is.hotelzargo.presentacion.comand.Command;
 
 public class CommandActionModShift implements Command {
 
-	private String id;
+	private ShiftTransfer shiftTransfer;
 	
-	public CommandActionModShift(String id){
-		this.id = id;
+	public CommandActionModShift(ShiftTransfer t){
+		shiftTransfer = t;
 	}
 	
 	@Override
@@ -19,7 +20,7 @@ public class CommandActionModShift implements Command {
 		Facade facade = BusinessFactory.getInstance().getFacade();
 		
 		try {
-			facade.modShift(this.id);
+			facade.modShift(this.shiftTransfer);
 		} catch (ShiftAppServicesException e) {
 			e.printStackTrace();
 		}
