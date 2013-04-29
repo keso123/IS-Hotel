@@ -25,9 +25,8 @@ public class ServicesAppServicesImp implements ServicesAppServices {
 	}
 
 	@Override
-	public void modService(ServiceTransfer t)
-			throws ServicesAppServicesException {
-		// TODO Auto-generated method stub
+	public void modService(ServiceTransfer t) throws ServicesAppServicesException {
+		// TODO modificar servicio
 		
 	}
 
