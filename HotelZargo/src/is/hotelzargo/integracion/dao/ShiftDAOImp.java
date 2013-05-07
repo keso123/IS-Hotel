@@ -15,13 +15,13 @@ public class ShiftDAOImp implements ShiftDAO {
 	}
 
 	@Override
-	public void deleteShift(int id) throws ShiftIntegrationException {
+	public void deleteShift(String id) throws ShiftIntegrationException {
 		// TODO llamadas a BBDD
 		
 	}
 
 	@Override
-	public ShiftTransfer getShift(int id) throws ShiftIntegrationException {
+	public ShiftTransfer getShift(String id) throws ShiftIntegrationException {
 		// TODO llamadas a BBDD
 		return null;
 	}

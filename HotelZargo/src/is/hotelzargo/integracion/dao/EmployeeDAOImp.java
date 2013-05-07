@@ -15,13 +15,13 @@ public class EmployeeDAOImp implements EmployeeDAO {
 	}
 
 	@Override
-	public void deleteEmployee(int id) throws EmployeeIntegrationException {
+	public void deleteEmployee(String id) throws EmployeeIntegrationException {
 		// TODO llamadas a la BBDD
 		
 	}
 
 	@Override
-	public EmployeeTransfer getEmployee(int id)
+	public EmployeeTransfer getEmployee(String id)
 			throws EmployeeIntegrationException {
 		// TODO llamadas a la BBDD
 		return null;
@@ -35,7 +35,7 @@ public class EmployeeDAOImp implements EmployeeDAO {
 	}
 
 	@Override
-	public void updateEmployee(int id) throws EmployeeIntegrationException {
+	public void updateEmployee(EmployeeTransfer t) throws EmployeeIntegrationException {
 		// TODO llamadas a la BBDD
 		
 	}

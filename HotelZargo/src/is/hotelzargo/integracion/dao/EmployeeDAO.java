@@ -9,12 +9,12 @@ public interface EmployeeDAO {
 	
 	public void createEmployee(EmployeeTransfer t) throws EmployeeIntegrationException;
 	
-	public void deleteEmployee(int id) throws EmployeeIntegrationException;
+	public void deleteEmployee(String id) throws EmployeeIntegrationException;
 	
-	public EmployeeTransfer getEmployee(int id) throws EmployeeIntegrationException;
+	public EmployeeTransfer getEmployee(String id) throws EmployeeIntegrationException;
 	
 	public Vector<EmployeeTransfer> listEmployee() throws EmployeeIntegrationException;
 	
-	public void updateEmployee(int id) throws EmployeeIntegrationException;
+	public void updateEmployee(EmployeeTransfer t) throws EmployeeIntegrationException;
 
 }

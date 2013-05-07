@@ -14,7 +14,7 @@ public class BookDAOImp implements BookDAO {
 	}
 
 	@Override
-	public void deleteBook(int id) throws BookIntegrationException {
+	public void deleteBook(String id) throws BookIntegrationException {
 		// TODO llamadas a BBDD
 		
 	}
@@ -26,7 +26,7 @@ public class BookDAOImp implements BookDAO {
 	}
 
 	@Override
-	public BookTransfer getBook(int id) throws BookIntegrationException {
+	public BookTransfer getBook(String id) throws BookIntegrationException {
 		// TODO llamadas a BBDD
 		return null;
 	}

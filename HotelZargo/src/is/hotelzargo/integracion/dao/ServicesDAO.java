@@ -9,9 +9,9 @@ public interface ServicesDAO {
 
 	public void createService(ServiceTransfer t) throws ServicesIntegrationException;
 	
-	public void deleteService(int id) throws ServicesIntegrationException;
+	public void deleteService(String id) throws ServicesIntegrationException;
 	
-	public ServiceTransfer getService(int id) throws ServicesIntegrationException;
+	public ServiceTransfer getService(String id) throws ServicesIntegrationException;
 	
 	public Vector<ServiceTransfer> listService() throws ServicesIntegrationException;
 	

@@ -1,5 +1,8 @@
 package is.hotelzargo.negocio.appservices;
 
+import is.hotelzargo.integracion.DAOFactory;
+import is.hotelzargo.integracion.dao.BookDAO;
+import is.hotelzargo.integracion.exception.BookIntegrationException;
 import is.hotelzargo.negocio.exception.BookAppServicesException;
 import is.hotelzargo.negocio.transfer.BookTransfer;
 
@@ -8,12 +11,28 @@ public class BookAppServicesImp implements BookAppServices {
 	@Override
 	public void addBook(BookTransfer t) throws BookAppServicesException {
 		// TODO crear reserva
+		DAOFactory fac = DAOFactory.getInstance();
+		BookDAO dao = fac.getBookDAO();
+		
+		try {
+			dao.createBook(t);
+		} catch (BookIntegrationException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
 	@Override
 	public void delBook(String id) throws BookAppServicesException {
 		// TODO borrar reserva
+		DAOFactory fac = DAOFactory.getInstance();
+		BookDAO dao = fac.getBookDAO();
+		
+		try {
+			dao.deleteBook(id);
+		} catch (BookIntegrationException e) {
+			e.printStackTrace();
+		}
 		
 	}
 

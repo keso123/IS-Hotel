@@ -14,13 +14,13 @@ public class RoomDAOImp implements RoomDAO {
 	}
 
 	@Override
-	public void deleteRoom(int id) throws RoomIntegrationException {
+	public void deleteRoom(String id) throws RoomIntegrationException {
 		// TODO llamadas a la BBDD
 		
 	}
 
 	@Override
-	public RoomTransfer getRoom(int id) throws RoomIntegrationException {
+	public RoomTransfer getRoom(String id) throws RoomIntegrationException {
 		// TODO llamadas a la BBDD
 		return null;
 	}

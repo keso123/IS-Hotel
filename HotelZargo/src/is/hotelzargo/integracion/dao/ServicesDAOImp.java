@@ -15,13 +15,13 @@ public class ServicesDAOImp implements ServicesDAO {
 	}
 
 	@Override
-	public void deleteService(int id) throws ServicesIntegrationException {
+	public void deleteService(String id) throws ServicesIntegrationException {
 		// TODO llamadas a BBDD
 		
 	}
 
 	@Override
-	public ServiceTransfer getService(int id)
+	public ServiceTransfer getService(String id)
 			throws ServicesIntegrationException {
 		// TODO llamadas a BBDD
 		return null;
