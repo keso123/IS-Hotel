@@ -1,7 +1,6 @@
 package is.hotelzargo.integracion.dao;
 
 import is.hotelzargo.integracion.exception.ShiftIntegrationException;
-import is.hotelzargo.negocio.transfer.ServiceTransfer;
 import is.hotelzargo.negocio.transfer.ShiftTransfer;
 
 import java.util.Vector;
