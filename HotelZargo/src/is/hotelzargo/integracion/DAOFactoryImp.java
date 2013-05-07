@@ -1,7 +1,17 @@
 package is.hotelzargo.integracion;
 
+import is.hotelzargo.integracion.dao.BookDAO;
+import is.hotelzargo.integracion.dao.BookDAOImp;
 import is.hotelzargo.integracion.dao.ClientDAO;
 import is.hotelzargo.integracion.dao.ClientDAOImp;
+import is.hotelzargo.integracion.dao.EmployeeDAO;
+import is.hotelzargo.integracion.dao.EmployeeDAOImp;
+import is.hotelzargo.integracion.dao.RoomDAO;
+import is.hotelzargo.integracion.dao.RoomDAOImp;
+import is.hotelzargo.integracion.dao.ServicesDAO;
+import is.hotelzargo.integracion.dao.ServicesDAOImp;
+import is.hotelzargo.integracion.dao.ShiftDAO;
+import is.hotelzargo.integracion.dao.ShiftDAOImp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -32,16 +42,6 @@ public class DAOFactoryImp extends DAOFactory {
 	*/
 	
 	}
-	
-	
-
-	@Override
-	public ClientDAO getClientDAO() {
-		return new ClientDAOImp();
-	}
-	
-	
-	
 	
 	private void createDataBase() throws SQLException{
 		s.executeUpdate("CREATE TABLE Clients (" +
@@ -129,20 +129,36 @@ public class DAOFactoryImp extends DAOFactory {
 			e.printStackTrace();
 		}
 		
-		
-		
-		
 	}
 	
-	
-	
-	/* MAIN 
-	public static void main(String[] args) {
-		//MainFrame.getInstance().setVisible(true);
-		
-		DAOFactoryImp d = new DAOFactoryImp();
+	@Override
+	public ClientDAO getClientDAO() {
+		return new ClientDAOImp();
 	}
-	
-	*/
+
+	@Override
+	public BookDAO getBookDAO() {
+		return new BookDAOImp();
+	}
+
+	@Override
+	public EmployeeDAO getEmployeeDAO() {
+		return new EmployeeDAOImp();
+	}
+
+	@Override
+	public RoomDAO getRoomDAO() {
+		return new RoomDAOImp();
+	}
+
+	@Override
+	public ServicesDAO getServicesDAO() {
+		return new ServicesDAOImp();
+	}
+
+	@Override
+	public ShiftDAO getShiftDAO() {
+		return new ShiftDAOImp();
+	}
 	
 }
