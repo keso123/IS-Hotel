@@ -40,11 +40,28 @@ public class BookAppServicesImp implements BookAppServices {
 	public void listBook() throws BookAppServicesException {
 		// TODO listar reservas
 		
+		DAOFactory fac = DAOFactory.getInstance();
+		BookDAO dao = fac.getBookDAO();
+		
+		try {
+			dao.listBook();
+		} catch (BookIntegrationException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void modBook(BookTransfer t) throws BookAppServicesException {
 		// TODO modificar reservas
+		
+		DAOFactory fac = DAOFactory.getInstance();
+		BookDAO dao = fac.getBookDAO();
+		
+		try {
+			dao.updateBook(t);
+		} catch (BookIntegrationException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -57,6 +74,15 @@ public class BookAppServicesImp implements BookAppServices {
 	@Override
 	public void confirmBook(String id) throws BookAppServicesException {
 		// TODO confirmar reserva
+		
+		DAOFactory fac = DAOFactory.getInstance();
+		BookDAO dao = fac.getBookDAO();
+		
+		try {
+			dao.confirmBook(id);
+		} catch (BookIntegrationException e) {
+			e.printStackTrace();
+		}
 		
 	}
 

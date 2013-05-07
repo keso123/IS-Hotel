@@ -20,5 +20,5 @@ public interface BookDAO {
 	
 	public Vector<BookTransfer> listBook() throws BookIntegrationException;
 	
-	public void confirmBook(int id) throws BookIntegrationException;
+	public void confirmBook(String id) throws BookIntegrationException;
 }

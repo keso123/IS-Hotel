@@ -33,7 +33,7 @@ public class ShiftDAOImp implements ShiftDAO {
 	}
 
 	@Override
-	public void updateShift(ServiceTransfer t) throws ShiftIntegrationException {
+	public void updateShift(ShiftTransfer t) throws ShiftIntegrationException {
 		// TODO llamadas a BBDD
 		
 	}

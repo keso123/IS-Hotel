@@ -16,5 +16,5 @@ public interface ShiftDAO {
 	
 	public Vector<ShiftTransfer> listShift() throws ShiftIntegrationException;
 	
-	public void updateShift(ServiceTransfer t) throws ShiftIntegrationException;
+	public void updateShift(ShiftTransfer t) throws ShiftIntegrationException;
 }

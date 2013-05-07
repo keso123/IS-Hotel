@@ -38,7 +38,7 @@ public class BookDAOImp implements BookDAO {
 	}
 
 	@Override
-	public void confirmBook(int id) throws BookIntegrationException {
+	public void confirmBook(String id) throws BookIntegrationException {
 		// TODO llamadas a BBDD
 		
 	}
